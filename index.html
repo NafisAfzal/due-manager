@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Due Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <h1>Due Manager</h1>
+    <div class="counts" id="counts"></div>
+  </header>
+
+  <main class="container">
+    <section class="add-panel">
+      <button id="starToggle" class="star-btn" title="Mark important (toggle)" aria-label="Mark new task as important" aria-pressed="false">☆</button>
+      <label class="visually-hidden" for="taskInput">Add a task</label>
+      <input id="taskInput" type="text" placeholder="Add a task" autocomplete="off" />
+      <button id="addBtn" class="primary">Add</button>
+      <label class="visually-hidden" for="search">Search tasks</label>
+      <input id="search" type="search" placeholder="Search..." />
+    </section>
+
+    <section class="filters">
+      <label><input type="checkbox" id="showStarredOnly"> Show starred only</label>
+      <label><input type="checkbox" id="sortByNewest"> Sort: Newest first</label>
+    </section>
+
+    <section class="tasks">
+      <ul id="taskList" class="task-list" aria-live="polite"></ul>
+      <div class="empty" id="emptyMsg">No active tasks. Add one above.</div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
